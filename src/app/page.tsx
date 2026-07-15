@@ -1,64 +1,130 @@
-import Image from "next/image";
+import { ApplyForm } from "./ApplyForm";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <div className="relative min-h-full overflow-x-hidden bg-[radial-gradient(circle_at_20%_10%,#ffe08a_0%,transparent_35%),radial-gradient(circle_at_90%_0%,#ffb7c5_0%,transparent_32%),linear-gradient(180deg,#dff6ff_0%,#fff8ef_48%,#ffe9d6_100%)]">
+      <span className="star-deco animate-twinkle top-8 left-[8%] text-2xl" aria-hidden>
+        ★
+      </span>
+      <span
+        className="star-deco animate-twinkle top-24 right-[12%] text-xl text-coral"
+        style={{ animationDelay: "0.6s" }}
+        aria-hidden
+      >
+        ★
+      </span>
+      <span
+        className="star-deco animate-twinkle top-[42%] left-[4%] text-lg text-teal"
+        style={{ animationDelay: "1.1s" }}
+        aria-hidden
+      >
+        ★
+      </span>
+
+      <main className="relative mx-auto flex w-full max-w-5xl flex-col px-4 py-10 sm:px-6 lg:py-14">
+        <header className="animate-fade-up flex min-h-[min(70vh,36rem)] flex-col items-center justify-center text-center">
+          <h1 className="font-display text-5xl leading-none tracking-tight sm:text-7xl lg:text-8xl">
+            <span className="text-[#4aa3de]">Camp </span>
+            <span className="text-[#ff7a59]">Spar</span>
+            <span className="text-[#3ecf7a]">kle</span>
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <p className="mt-4 font-display text-2xl text-ribbon sm:text-3xl">
+            where every kid shines
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
+          <p className="mx-auto mt-4 max-w-lg text-base text-ink/80 sm:text-lg">
+            A special-needs day camp — a safe place to grow, laugh &amp; shine.
+          </p>
           <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#apply"
+            className="mt-8 inline-flex rounded-2xl bg-ribbon px-8 py-3.5 font-display text-lg text-white shadow-[0_6px_0_#1a2f52] transition hover:-translate-y-0.5 hover:bg-[#355890]"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
+            Apply now ★
           </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+        </header>
+
+        <section
+          className="animate-fade-up border-t border-ribbon/10 py-12 text-center"
+          style={{ animationDelay: "0.1s" }}
+          aria-labelledby="session-heading"
+        >
+          <h2 id="session-heading" className="font-display text-3xl text-ribbon sm:text-4xl">
+            August 12 – September 1
+          </h2>
+          <p className="mt-3 text-lg font-semibold text-ink/85">
+            10:00 AM – 2:30 PM
+          </p>
+          <p className="mt-1 text-sm text-ink/65">Optional extended hours available</p>
+        </section>
+
+        <section
+          className="animate-fade-up grid gap-10 border-t border-ribbon/10 py-12 sm:grid-cols-3 sm:gap-8"
+          style={{ animationDelay: "0.18s" }}
+          aria-label="What to expect"
+        >
+          <div>
+            <p className="font-display text-xl text-teal">Lunch included</p>
+            <p className="mt-2 text-sm leading-relaxed text-ink/75">
+              Kids eat a full lunch with us every day — one less thing to pack.
+            </p>
+          </div>
+          <div>
+            <p className="font-display text-xl text-coral">Experienced staff</p>
+            <p className="mt-2 text-sm leading-relaxed text-ink/75">
+              Run by experienced teachers and staff who know how to support every child.
+            </p>
+          </div>
+          <div>
+            <p className="font-display text-xl text-ribbon">Safe &amp; joyful</p>
+            <p className="mt-2 text-sm leading-relaxed text-ink/75">
+              A caring setting where children can grow, laugh, and shine together.
+            </p>
+          </div>
+        </section>
+
+        <section
+          id="apply"
+          className="animate-fade-up scroll-mt-8 border-t border-ribbon/10 py-12"
+          style={{ animationDelay: "0.26s" }}
+        >
+          <div className="mx-auto max-w-xl rounded-[2rem] border-4 border-white bg-cream/95 p-6 shadow-[0_18px_40px_rgba(30,58,95,0.14)] sm:p-8">
+            <h2 className="font-display text-3xl text-ribbon">Apply now</h2>
+            <p className="mt-2 mb-6 text-sm text-ink/75">
+              Tell us about your child and how to reach you. We&apos;ll send your application
+              straight to camp.
+            </p>
+            <ApplyForm />
+          </div>
+        </section>
+
+        <section
+          className="animate-fade-up border-t border-ribbon/10 py-12 text-center"
+          style={{ animationDelay: "0.34s" }}
+          aria-labelledby="contact-heading"
+        >
+          <h2 id="contact-heading" className="font-display text-2xl text-ribbon">
+            Questions? Call to register &amp; learn more
+          </h2>
+          <ul className="mt-6 flex flex-col items-center gap-3 text-ink sm:flex-row sm:justify-center sm:gap-10">
+            <li>
+              <span className="block text-sm font-bold text-ink/70">Leah&apos;la Weber</span>
+              <a
+                className="font-display text-xl text-teal underline-offset-2 hover:underline"
+                href="tel:8452747741"
+              >
+                (845) 274-7741
+              </a>
+            </li>
+            <li>
+              <span className="block text-sm font-bold text-ink/70">Leah Kugelman</span>
+              <a
+                className="font-display text-xl text-coral underline-offset-2 hover:underline"
+                href="tel:8452747213"
+              >
+                (845) 274-7213
+              </a>
+            </li>
+          </ul>
+        </section>
       </main>
     </div>
   );
