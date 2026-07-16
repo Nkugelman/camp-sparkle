@@ -1,10 +1,8 @@
 import { ApplyForm } from "./ApplyForm";
-import { BouncingPhoto } from "./BouncingPhoto";
 
 export default function Home() {
   return (
     <div className="relative min-h-full overflow-x-hidden bg-[radial-gradient(circle_at_20%_10%,#ffe08a_0%,transparent_35%),radial-gradient(circle_at_90%_0%,#ffb7c5_0%,transparent_32%),linear-gradient(180deg,#dff6ff_0%,#fff8ef_48%,#ffe9d6_100%)]">
-      <BouncingPhoto />
       <span className="star-deco animate-twinkle top-8 left-[8%] text-2xl" aria-hidden>
         ★
       </span>
